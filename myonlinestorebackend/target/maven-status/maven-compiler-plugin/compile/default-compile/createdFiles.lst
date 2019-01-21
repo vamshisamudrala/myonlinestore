@@ -1,0 +1,5 @@
+com\vamshi\dao\CategoryDAO.class
+com\vamshi\config\DBConfig.class
+com\vamshi\daoimpl\CategoryDAOImpl.class
+com\vamshi\model\Category.class
+com\vamshi\myonlinestorebackend\App.class
