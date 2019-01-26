@@ -1,3 +1,6 @@
 com\vamshi\myonlinestorebackend\AppTest.class
-com\vamshi\myonlinestorebackend\CategoryUnitTest.class
 com\vamshi\myonlinestorebackend\GeneralTest.class
+com\vamshi\myonlinestorebackend\SupplierUnitTest.class
+com\vamshi\myonlinestorebackend\UserUnitTest.class
+com\vamshi\myonlinestorebackend\CategoryUnitTest.class
+com\vamshi\myonlinestorebackend\ProductUnitTest.class

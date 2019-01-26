@@ -1,5 +1,14 @@
 com\vamshi\dao\CategoryDAO.class
+com\vamshi\daoimpl\ProductDAOImpl.class
 com\vamshi\config\DBConfig.class
-com\vamshi\daoimpl\CategoryDAOImpl.class
+com\vamshi\model\UserDetail.class
+com\vamshi\dao\ProductDAO.class
 com\vamshi\model\Category.class
+com\vamshi\dao\UserDAO.class
+com\vamshi\daoimpl\SupplierDAOImpl.class
+com\vamshi\daoimpl\CategoryDAOImpl.class
+com\vamshi\model\Product.class
+com\vamshi\daoimpl\UserDAOImpl.class
+com\vamshi\model\Supplier.class
 com\vamshi\myonlinestorebackend\App.class
+com\vamshi\dao\SupplierDAO.class

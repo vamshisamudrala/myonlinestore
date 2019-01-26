@@ -24,6 +24,8 @@ public class SupplierUnitTest {
 		supplierDAO=(SupplierDAO)context.getBean("supplierDAO");
 	}
 
+	@Ignore
+
 	@Test
 	public void addSupplierTest()
 	{

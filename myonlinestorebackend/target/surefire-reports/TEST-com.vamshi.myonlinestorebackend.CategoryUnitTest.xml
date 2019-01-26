@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.vamshi.myonlinestorebackend.CategoryUnitTest" time="0.39" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="com.vamshi.myonlinestorebackend.CategoryUnitTest" time="16.563" errors="0" skipped="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="E:\Program Files\Java\jdk1.8.0_191\jre\bin"/>
     <property name="java.vm.version" value="25.191-b12"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="E:\programs\myonlinestorebackend"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\vamsh\git\myonlinestore\myonlinestorebackend"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\programs\myonlinestorebackend"/>
+    <property name="user.dir" value="C:\Users\vamsh\git\myonlinestore\myonlinestorebackend"/>
     <property name="java.runtime.version" value="1.8.0_191-b12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="E:\Program Files\Java\jdk1.8.0_191\jre\lib\endorsed"/>
@@ -27,9 +27,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="E:\programs\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2800809948852079622.tmp"/>
+    <property name="classworlds.conf" value="E:\programs\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1076939800553573230.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="E:\Program Files\Java\jdk1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/Program Files/New folder/bin/server;E:/Program Files/New folder/bin;E:/Program Files/New folder/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\Program Files\java-1.8\bin;E:\apache-maven-3.6.0\bin;E:\apache-maven-3.6.0\bin;C:\Users\vamsh\AppData\Local\Microsoft\WindowsApps;;E:\eclipse;;."/>
+    <property name="java.library.path" value="E:\Program Files\Java\jdk1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/Program Files/New folder/bin/server;E:/Program Files/New folder/bin;E:/Program Files/New folder/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;E:\Program Files\Java\jdk1.8.0_191\bin;E:\apache-maven-3.6.0\bin;E:\apache-maven-3.6.0\bin;C:\Users\vamsh\AppData\Local\Microsoft\WindowsApps;;E:\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -53,7 +53,7 @@
     <property name="java.ext.dirs" value="E:\Program Files\Java\jdk1.8.0_191\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="E:\Program Files\Java\jdk1.8.0_191\jre\lib\resources.jar;E:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar;E:\Program Files\Java\jdk1.8.0_191\jre\lib\sunrsasign.jar;E:\Program Files\Java\jdk1.8.0_191\jre\lib\jsse.jar;E:\Program Files\Java\jdk1.8.0_191\jre\lib\jce.jar;E:\Program Files\Java\jdk1.8.0_191\jre\lib\charsets.jar;E:\Program Files\Java\jdk1.8.0_191\jre\lib\jfr.jar;E:\Program Files\Java\jdk1.8.0_191\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="E:\programs\myonlinestorebackend\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\vamsh\git\myonlinestore\myonlinestorebackend\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,5 +61,35 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.vamshi.myonlinestorebackend.CategoryUnitTest" name="addCategoryTest" time="0.39"/>
+  <testcase classname="com.vamshi.myonlinestorebackend.CategoryUnitTest" name="addCategoryTest" time="5.396">
+    <skipped/>
+    <system-out>DataSource Created
+Session Factory created
+Hibernate Transaction manager object created
+</system-out>
+    <system-err>Jan 23, 2019 2:23:40 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4c203ea1: startup date [Wed Jan 23 14:23:40 IST 2019]; root of context hierarchy
+Jan 23, 2019 2:23:41 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.h2.Driver
+Jan 23, 2019 2:23:42 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {5.1.0.Final}
+Jan 23, 2019 2:23:42 PM org.hibernate.cfg.Environment &lt;clinit&gt;
+INFO: HHH000206: hibernate.properties not found
+Jan 23, 2019 2:23:42 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Jan 23, 2019 2:23:42 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager &lt;clinit&gt;
+INFO: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+Jan 23, 2019 2:23:42 PM org.hibernate.dialect.Dialect &lt;init&gt;
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Jan 23, 2019 2:23:44 PM org.springframework.orm.hibernate5.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@587e5365] of Hibernate SessionFactory for HibernateTransactionManager
+</system-err>
+  </testcase>
+  <testcase classname="com.vamshi.myonlinestorebackend.CategoryUnitTest" name="deleteCategoryTest" time="5.396">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.vamshi.myonlinestorebackend.CategoryUnitTest" name="updateCategoryTest" time="5.412">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.vamshi.myonlinestorebackend.CategoryUnitTest" name="listCategoriesTest" time="0.359"/>
 </testsuite>

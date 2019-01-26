@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -24,6 +25,8 @@ public class ProductUnitTest
 		productDAO=(ProductDAO)context.getBean("productDAO");
 	}
 	
+	@Ignore
+
 	@Test
 	public void addProductTest()
 	{

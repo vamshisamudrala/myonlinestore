@@ -23,6 +23,7 @@ public class CategoryUnitTest
 		context.refresh();
 		categoryDAO=(CategoryDAO)context.getBean("categoryDAO");
 	}
+	@Ignore
 
 	@Test
 	public void addCategoryTest()
@@ -40,6 +41,7 @@ public class CategoryUnitTest
 		Category category=categoryDAO.getCategory(2);
 		assertTrue("Problem in Deleting Category:",categoryDAO.deleteCategory(category));
 	}
+	@Ignore
 	
 	@Test
 	public void updateCategoryTest()

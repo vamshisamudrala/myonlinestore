@@ -3,6 +3,7 @@ package com.vamshi.myonlinestorebackend;
 import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -23,6 +24,8 @@ static UserDAO userDAO;
 		userDAO=(UserDAO)context.getBean("userDAO");
 	}
 	
+	@Ignore
+
 	@Test
 	public void registerUserTest()
 	{

@@ -15,26 +15,29 @@ public class Category
 	String categoryName;
 	String categoryDesc;
 	
-	public int getCategoryID() {
+	public int getCategoryID() 
+	{
 		return categoryID;
 	}
-	public void setCategoryID(int categoryID) {
+	public void setCategoryID(int categoryID) 
+	{
 		this.categoryID = categoryID;
 	}
-	public String getCategoryName() {
+	public String getCategoryName() 
+	{
 		return categoryName;
 	}
-	public void setCategoryName(String categoryName) {
+	public void setCategoryName(String categoryName) 
+	{
 		this.categoryName = categoryName;
 	}
-	public String getCategoryDesc() {
+	public String getCategoryDesc() 
+	{
 		return categoryDesc;
 	}
-	public void setCategoryDesc(String categoryDesc) {
+	public void setCategoryDesc(String categoryDesc) 
+	{
 		this.categoryDesc = categoryDesc;
 	}
 	
-	
-	
-
 }
