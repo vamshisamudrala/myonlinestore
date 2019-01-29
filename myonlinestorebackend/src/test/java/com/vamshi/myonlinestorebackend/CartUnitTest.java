@@ -5,7 +5,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.vamshi.dao.CartDAO;
@@ -15,6 +17,8 @@ import com.vamshi.model.Cart;
 
 public class CartUnitTest 
 {
+	
+	@Autowired
 	static CartDAO cartDAO;
 	
 	@BeforeClass
@@ -26,6 +30,7 @@ public class CartUnitTest
 		cartDAO=(CartDAO)context.getBean("cartDAO");
 	}
 	
+	@Ignore
 	@Test
 	public void addCartTest()
 	{

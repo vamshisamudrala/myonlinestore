@@ -24,19 +24,19 @@ static UserDAO userDAO;
 		userDAO=(UserDAO)context.getBean("userDAO");
 	}
 	
-	@Ignore
+
 
 	@Test
 	public void registerUserTest()
 	{
 		UserDetail user=new UserDetail();
 		
-		user.setUsername("vamshi");
-		user.setPassword("p123456");
+		user.setUsername("venky");
+		user.setPassword("venky456");
 		user.setEnabled(true);
-		user.setRole("ROLE_USER");
-		user.setCustomerName("Vamshi Samudrala");
-		user.setCustomerAddr("Hyderabad");
+		user.setRole("ROLE_admin");
+		user.setCustomerName("venkatesh");
+		user.setCustomerAddr("kothapet");
 		
 		assertTrue("Problem in adding User:",userDAO.registerUser(user));
 	}
