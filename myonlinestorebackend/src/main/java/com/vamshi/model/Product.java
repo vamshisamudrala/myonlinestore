@@ -44,37 +44,31 @@ public class Product
 	{
 		this.productDesc = productDesc;
 	}
-	public int getPrice() 
-	{
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(int price) 
-	{
+	public void setPrice(int price) {
 		this.price = price;
 	}
-	public int getStock() 
-	{
+	public int getStock() {
 		return stock;
 	}
-	public void setStock(int stock) 
-	{
+	public void setStock(int stock) {
 		this.stock = stock;
 	}
-	public int getCategoryId() 
-	{
+	public int getCategoryId() {
 		return categoryId;
 	}
-	public void setCategoryId(int categoryId) 
-	{
+	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
 	}
-	public int getSupplierId() 
-	{
+	public int getSupplierId() {
 		return supplierId;
 	}
-	public void setSupplierId(int supplierId) 
-	{
+	public void setSupplierId(int supplierId) {
 		this.supplierId = supplierId;
 	}
 	
+
+
 }

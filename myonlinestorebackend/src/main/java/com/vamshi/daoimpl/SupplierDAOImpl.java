@@ -19,7 +19,7 @@ public class SupplierDAOImpl implements SupplierDAO
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	@Override
+	 
 	public boolean addSupplier(Supplier supplier) 
 	{
 		try
@@ -33,7 +33,7 @@ public class SupplierDAOImpl implements SupplierDAO
 		}
 	}
 
-	@Override
+	 
 	public boolean deleteSupplier(Supplier supplier) 
 	{
 		try
@@ -47,7 +47,7 @@ public class SupplierDAOImpl implements SupplierDAO
 		}
 	}
 
-	@Override
+	 
 	public boolean updateSupplier(Supplier supplier) 
 	{
 		try
@@ -60,8 +60,7 @@ public class SupplierDAOImpl implements SupplierDAO
 			return false;
 		}
 	}
-
-	@Override
+ 
 	public List<Supplier> listSuppliers() 
 	{
 		Session session=sessionFactory.openSession();
@@ -71,7 +70,7 @@ public class SupplierDAOImpl implements SupplierDAO
 		return listSuppliers;
 	}
 
-	@Override
+	 
 	public Supplier getSupplier(int supplierID) 
 	{
 		Session session=sessionFactory.openSession();

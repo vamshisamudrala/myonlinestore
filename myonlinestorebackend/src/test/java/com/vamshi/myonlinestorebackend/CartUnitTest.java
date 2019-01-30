@@ -45,7 +45,7 @@ public class CartUnitTest
 		assertTrue("Problem in Adding Cart" , cartDAO.addCart(cart));
 	}
 	
-	
+	@Ignore
 	@Test
 	public void displayCart()
 	{

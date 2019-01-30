@@ -39,4 +39,5 @@ public class Supplier
 	{
 		this.supplierAddr = supplierAddr;
 	}
+
 }

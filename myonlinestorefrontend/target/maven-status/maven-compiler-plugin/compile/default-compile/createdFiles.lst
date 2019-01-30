@@ -1,0 +1,5 @@
+com\vamshi\controller\PageController.class
+com\vamshi\controller\ProductController.class
+com\vamshi\controller\SupplierController.class
+com\vamshi\controller\CategoryController.class
+com\vamshi\controller\UserController.class

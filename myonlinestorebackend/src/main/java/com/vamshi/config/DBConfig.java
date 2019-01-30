@@ -1,5 +1,4 @@
 package com.vamshi.config;
-
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -13,10 +12,6 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.vamshi.model.Category;
-import com.vamshi.model.Product;
-import com.vamshi.model.Supplier;
-import com.vamshi.model.UserDetail;
 
 @Configuration
 @EnableTransactionManagement
@@ -48,8 +43,8 @@ public class DBConfig
 		
 			//buildFactory.addAnnotatedClass(Category.class);
 			//buildFactory.addAnnotatedClass(Supplier.class);
-			//buildFactory.addAnnotatedClass(Product.class);
-			//buildFactory.addAnnotatedClass(UserDetail.class);
+		//	buildFactory.addAnnotatedClass(Product.class);
+		//	buildFactory.addAnnotatedClass(UserDetail.class);
 			buildFactory.scanPackages("com.vamshi.model");
 			
 			System.out.println("Session Factory created");

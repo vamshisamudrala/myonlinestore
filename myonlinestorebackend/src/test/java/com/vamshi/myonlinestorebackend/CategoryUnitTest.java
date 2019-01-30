@@ -29,8 +29,8 @@ public class CategoryUnitTest
 	public void addCategoryTest()
 	{
 		Category category=new Category();
-		category.setCategoryName("Mobiles");
-		category.setCategoryDesc("Electronics");
+		category.setCategoryName("Mobiles1");
+		category.setCategoryDesc("Electronics1");
 		assertTrue("Problem in adding Category",categoryDAO.addCategory(category));
 			
 	}
@@ -47,11 +47,11 @@ public class CategoryUnitTest
 	public void updateCategoryTest()
 	{
 		Category category=categoryDAO.getCategory(3);
-		category.setCategoryName("Television");
-		category.setCategoryDesc("Electronics");
+		category.setCategoryName("Television1");
+		category.setCategoryDesc("Electronics1");
 		assertTrue("Problem in Updating the Category",categoryDAO.updateCategory(category));
 	}
-	
+	@Ignore
 	@Test
 	public void listCategoriesTest()
 	{

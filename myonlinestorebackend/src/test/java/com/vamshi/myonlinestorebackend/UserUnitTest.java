@@ -25,7 +25,7 @@ static UserDAO userDAO;
 	}
 	
 
-
+    @Ignore
 	@Test
 	public void registerUserTest()
 	{
