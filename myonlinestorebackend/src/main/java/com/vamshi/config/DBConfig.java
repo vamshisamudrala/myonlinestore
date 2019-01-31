@@ -40,11 +40,7 @@ public class DBConfig
 			hibernateProp.put("hibernate.dialect","org.hibernate.dialect.H2Dialect");
 			LocalSessionFactoryBuilder buildFactory=new LocalSessionFactoryBuilder(getH2DataSource());
 			buildFactory.addProperties(hibernateProp);
-		
-			//buildFactory.addAnnotatedClass(Category.class);
-			//buildFactory.addAnnotatedClass(Supplier.class);
-		//	buildFactory.addAnnotatedClass(Product.class);
-		//	buildFactory.addAnnotatedClass(UserDetail.class);
+			
 			buildFactory.scanPackages("com.vamshi.model");
 			
 			System.out.println("Session Factory created");

@@ -25,8 +25,8 @@ public class ProductUnitTest
 		productDAO=(ProductDAO)context.getBean("productDAO");
 	}
 	
-	@Ignore
-
+	
+    @Ignore
 	@Test
 	public void addProductTest()
 	{

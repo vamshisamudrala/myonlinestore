@@ -35,12 +35,12 @@ public class CartUnitTest
 	public void addCartTest()
 	{
 		Cart cart=new Cart();
-		cart.setProductID(40);
+		cart.setProductID(2);
 		cart.setProductName("Lenova core");
-		cart.setQuantity(3);
+		cart.setQuantity(1);
 		cart.setPrice(4500);
 		cart.setPaymentStatus("NO");
-		cart.setUsername("vamshi");
+		cart.setUsername("venky");
 		
 		assertTrue("Problem in Adding Cart" , cartDAO.addCart(cart));
 	}
