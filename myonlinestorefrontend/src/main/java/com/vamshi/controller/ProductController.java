@@ -1,5 +1,9 @@
 package com.vamshi.controller;
 
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -20,7 +24,7 @@ import com.vamshi.model.Product;
 
 
 @Controller
-public class ProductController 
+public class ProductController<FileOutputStreeam> 
 {
 	@Autowired
 	CategoryDAO categoryDAO;
@@ -43,7 +47,7 @@ public class ProductController
 		return "Product";
 	}
 	@RequestMapping(value="/InsertProduct",method=RequestMethod.POST)
-	public String insertProduct(@ModelAttribute("product")Product product,Model m)
+	public String insertProduct(@ModelAttribute("product")Product product,Model m, String filedet)
 	{
 	    productDAO.addProduct(product);
 		
@@ -51,7 +55,32 @@ public class ProductController
 	    m.addAttribute(product1);
 	    m.addAttribute("pageinfo","Manage Product");
 	    m.addAttribute("categoryList",this.getCategories());
-		
+	    String imagepath="C:\\Users\\vamsh\\git\\myonlinestore\\myonlinestorefrontend\\src\\main\\webapp\\resources\\images\\";
+	    imagepath=imagepath+String.valueOf(product.getProductId())+".jpg";
+	    File image=new File(imagepath);
+	    
+	    if(!filedet.isEmpty())
+	    {
+	    	try
+	    	{
+	    		byte buff[]=filedet.getBytes();
+	    		FileOutputStream fos=new FileOutputStream(image);
+	    		BufferedOutputStream bos=new BufferedOutputStream(fos);
+	    		bos.write(buff);
+	    		bos.close();
+	    		
+	    	}
+	    	catch(Exception e)
+	    	{
+	    		m.addAttribute("Exception message","Exception in uploading the image:"+e.getMessage());
+	    		
+	    	}
+	    }
+	    else
+	    {
+	    	m.addAttribute("error message", "problem in uploadinf the image:");
+	    }
+	    
 		List<Product> listProducts=productDAO.listProducts();
 		m.addAttribute("productList", listProducts);
 		

@@ -15,7 +15,6 @@ public class Category
 	
 	String categoryName;
 	String categoryDesc;
-	
 	public int getCategoryID() {
 		return categoryID;
 	}
@@ -34,6 +33,7 @@ public class Category
 	public void setCategoryDesc(String categoryDesc) {
 		this.categoryDesc = categoryDesc;
 	}
+	
 	
 
 }

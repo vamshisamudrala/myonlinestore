@@ -4,7 +4,7 @@
 
 <br/><br/>
 
-<form:form action="InsertProduct" modelAttribute="product" method="post">
+<form:form action="InsertProduct" modelAttribute="product" method="post" enctype="multipart/form-data">
 <table align="center" class="table-bordered">
      <tr>
         <td colspan="2"><center>Product Information</center></td>
@@ -37,6 +37,10 @@
           <tr>
               <td>Product Desc</td>
               <td><form:input path="productDesc"/></td>
+           </tr>
+           <tr>
+              <td>Product image</td>
+              <td><form:input type="file" path="productimage"/></td>
            </tr>
            <tr>
               <td colspan="2"><center><input type="submit" value="InsertProduct"/></center></td>
