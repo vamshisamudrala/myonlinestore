@@ -26,7 +26,7 @@ import com.vamshi.model.Product;
 
 
 @Controller
-public class ProductController<FileOutputStreeam> 
+public class ProductController
 {
 	@Autowired
 	CategoryDAO categoryDAO;
@@ -49,7 +49,7 @@ public class ProductController<FileOutputStreeam>
 		return "Product";
 	}
 	@RequestMapping(value="/InsertProduct",method=RequestMethod.POST)
-	public String insertProduct(@ModelAttribute("product")Product product, @RequestParam("productimage") MultipartFile filesdet, Model m, String filedet)
+	public String insertProduct(@ModelAttribute("product")Product product, @RequestParam("productimage") MultipartFile filedet, Model m)
 	{
 	    productDAO.addProduct(product);
 		
@@ -90,6 +90,24 @@ public class ProductController<FileOutputStreeam>
 		return "Product";
 	}
 	
+	@RequestMapping(value="/UpdateProduct",method=RequestMethod.POST)
+    public String updateProduct(@ModelAttribute ("product")Product product,Model m)
+	
+	{
+	    productDAO.updateProduct(product);
+	    
+		Product product1=new Product();
+		m.addAttribute(product1);
+			
+		m.addAttribute("pageinfo","Manage product");
+		m.addAttribute("categoryList",this.getCategories());
+		
+		List<Product> listProducts=productDAO.listProducts();
+		m.addAttribute("productList", listProducts);
+
+		return "Product";
+	}
+	
 	@RequestMapping(value="/deleteProduct/{productId}")
 	public String deleteProduct(Model m,@PathVariable("productId")int productId)
 	{
@@ -108,23 +126,8 @@ public class ProductController<FileOutputStreeam>
 		return "Product";
 		}
 	
-	@RequestMapping(value="/UpdateProduct",method=RequestMethod.POST)
-    public String updateProduct(@ModelAttribute ("product")Product product,Model m)
 	
-	{
-	    productDAO.updateProduct(product);
-	    
-		Product product1=new Product();
-		m.addAttribute(product1);
-			
-		m.addAttribute("pageinfo","Manage product");
-		m.addAttribute("categoryList",this.getCategories());
-		
-		List<Product> listProducts=productDAO.listProducts();
-		m.addAttribute("productList", listProducts);
-
-		return "Product";
-	}
+	
 		@RequestMapping(value="/editProduct/{productId}")
 		public String editProduct(Model m,@PathVariable("productId")int productId)
 		{

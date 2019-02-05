@@ -23,10 +23,11 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a href="<c:url value="/login"/>">LOGIN</a></li>
       <li><a href="<c:url value="/register"/>">REGISTER</a></li>
-      <li><a href="<c:url value="/contactus"/>">ContactUs</a></li>
-      <li><a href="<c:url value="/aboutus"/>">AboutUs</a></li>
+     
       <li><a href="<c:url value="/product"/>">Manage Product</a></li>
       <li><a href="<c:url value="/category"/>">Manage Category</a></li>
+      <li> <a href="<c:url value='/productDisplay'/>"> PRODUCT CATALOG </a></li>
+      <li> <a href="<c:url value='/cart'/>"> CART </a></li>
       
 </ul>
   </div>
