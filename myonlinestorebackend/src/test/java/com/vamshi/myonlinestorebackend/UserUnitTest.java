@@ -36,7 +36,7 @@ static UserDAO userDAO;
 		user.setEnabled(true);
 		user.setRole("ROLE_ADMIN");
 		user.setCustomerName("ka paul");
-		user.setCustomerAddr("Andhra Pradesh");
+		user.setCustomerAddress("Andhra Pradesh");
 		
 		assertTrue("Problem in adding User:",userDAO.registerUser(user));
 	}

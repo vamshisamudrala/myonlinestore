@@ -14,7 +14,7 @@ public class UserDetail
 	String role; 
 	boolean enabled;
 	String customerName;
-	String customerAddr;
+	String customerAddress;
 	
 	public String getUsername() 
 	{
@@ -56,13 +56,13 @@ public class UserDetail
 	{
 		this.customerName = customerName;
 	}
-	public String getCustomerAddr() 
+	public String getCustomerAddress() 
 	{
-		return customerAddr;
+		return customerAddress;
 	}
-	public void setCustomerAddr(String customerAddr) 
+	public void setCustomerAddress(String customerAddr) 
 	{
-		this.customerAddr = customerAddr;
+		this.customerAddress = customerAddr;
 	}
 	
 
