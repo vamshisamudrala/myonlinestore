@@ -1,5 +1,6 @@
 package com.vamshi.daoimpl;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -32,15 +33,25 @@ public class UserDAOImpl implements UserDAO
 	 
 	public boolean updateAddress(UserDetail user) 
 	{
-		// TODO Auto-generated method stub
-		return false;
+		try
+		{
+			sessionFactory.getCurrentSession().update(user);
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;	
+		}
+		
 	}
 
  
 	public UserDetail getUser(String username) 
 	{
-		// TODO Auto-generated method stub
-		return null;
+		Session session=sessionFactory.openSession();
+		UserDetail userDetail=(UserDetail)session.get(UserDetail.class, username);
+		session.close();
+		return userDetail;
 	}
 	
 

@@ -4,7 +4,7 @@
 
 <br/><br/>
 
-<form:form action="InsertProduct" modelAttribute="product" method="post">
+<form:form action="InsertProduct" modelAttribute="product" method="post" enctype="multipart/form-data">
 <table align="center" class="table-bordered">
      <tr>
         <td colspan="2"><center>Product Information</center></td>
@@ -31,12 +31,16 @@
             </td>
          </tr>
          <tr>
-             <td>Supplier</td>
+             <td>SupplierId</td>
              <td><form:input path="supplierId"/></td>
           </tr>
           <tr>
               <td>Product Desc</td>
               <td><form:input path="productDesc"/></td>
+           </tr>
+           <tr>
+              <td>Product image</td>
+              <td><form:input type="file" path="productimage"/></td>
            </tr>
            <tr>
               <td colspan="2"><center><input type="submit" value="InsertProduct"/></center></td>
@@ -51,7 +55,7 @@
            <td>Product Name</td>
            <td>Price</td>
            <td>Stock</td>
-           <td>Supplier</td>
+           <td>SupplierId</td>
            <td>Operations</td>
          </tr>
          <c:forEach items="${productList}" var="product">

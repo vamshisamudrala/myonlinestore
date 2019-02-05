@@ -19,7 +19,7 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">myOnlinestore</a>
     </div>
-    <ul class="nav navbar-nav">
+     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li><a href="<c:url value="/login"/>">LOGIN</a></li>
       <li><a href="<c:url value="/register"/>">REGISTER</a></li>
@@ -27,9 +27,8 @@
       <li><a href="<c:url value="/aboutus"/>">AboutUs</a></li>
       <li><a href="<c:url value="/product"/>">Manage Product</a></li>
       <li><a href="<c:url value="/category"/>">Manage Category</a></li>
-        <li><a href="<c:url value="/supplier"/>">Manage Supplier</a></li>
-     
-     </ul>
+      
+</ul>
   </div>
 </nav>
   

@@ -31,7 +31,7 @@
             </td>
          </tr>
          <tr>
-             <td>Supplier</td>
+             <td>SupplierId</td>
              <td><form:input path="supplierId"/></td>
           </tr>
           <tr>
@@ -55,7 +55,7 @@
            <td>Product Name</td>
            <td>Price</td>
            <td>Stock</td>
-           <td>Supplier</td>
+           <td>SupplierId</td>
            <td>Operations</td>
          </tr>
          <c:forEach items="${productList}" var="product">

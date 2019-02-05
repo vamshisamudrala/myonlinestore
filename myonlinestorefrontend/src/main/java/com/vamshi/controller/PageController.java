@@ -13,11 +13,11 @@ public class PageController {
 		m.addAttribute("pageinfo","Login");
 		return "Login";
 	}
-	@RequestMapping("/register")
-	public String showRegister(Model m)
+	@RequestMapping("/signup")
+	public String showSignup(Model m)
 	{
-		m.addAttribute("pageinfo","Register");
-		return "Register";
+		m.addAttribute("pageinfo","Signup");
+		return "Signup";
 	}
 	@RequestMapping("/aboutus")
 	public String showAboutUs(Model m)

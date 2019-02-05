@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.vamshi.dao.CategoryDAO;
 import com.vamshi.dao.ProductDAO;
@@ -47,7 +49,7 @@ public class ProductController<FileOutputStreeam>
 		return "Product";
 	}
 	@RequestMapping(value="/InsertProduct",method=RequestMethod.POST)
-	public String insertProduct(@ModelAttribute("product")Product product,Model m, String filedet)
+	public String insertProduct(@ModelAttribute("product")Product product, @RequestParam("productimage") MultipartFile filesdet, Model m, String filedet)
 	{
 	    productDAO.addProduct(product);
 		
@@ -134,6 +136,23 @@ public class ProductController<FileOutputStreeam>
 			m.addAttribute("categoryList",this.getCategories());
 		
 			return "UpdateProduct";
+		}
+		@RequestMapping("/productDisplay")
+		public String displayProduct(Model m)
+		{
+			m.addAttribute("pageinfo", "Product Gallery");
+			List<Product> listProducts=productDAO.listProducts();
+			m.addAttribute("productList", listProducts);
+			return "ProductDisplay";
+		}
+		@RequestMapping("/productDetailsDisplay/{productID}")
+		public String ProductDetailsDisplay(@PathVariable("productId")int productId,Model m)
+		{
+			m.addAttribute("pageinfo","Product Info");
+			Product product=productDAO.getProduct(productId);
+			m.addAttribute("product",product);
+			return "ProductDetailsDisplay";
+			
 		}
 		
 		public LinkedHashMap<Integer,String> getCategories()

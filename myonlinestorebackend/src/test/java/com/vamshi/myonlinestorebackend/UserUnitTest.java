@@ -31,12 +31,12 @@ static UserDAO userDAO;
 	{
 		UserDetail user=new UserDetail();
 		
-		user.setUsername("venky");
-		user.setPassword("venky456");
+		user.setUsername("ka.paul");
+		user.setPassword("paul135");
 		user.setEnabled(true);
-		user.setRole("ROLE_admin");
-		user.setCustomerName("venkatesh");
-		user.setCustomerAddr("kothapet");
+		user.setRole("ROLE_ADMIN");
+		user.setCustomerName("ka paul");
+		user.setCustomerAddr("Andhra Pradesh");
 		
 		assertTrue("Problem in adding User:",userDAO.registerUser(user));
 	}
