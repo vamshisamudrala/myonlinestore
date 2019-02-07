@@ -11,11 +11,11 @@
   </tr>
   <tr>
       <td>Supplier Name</td>
-      <td><input type="text" name="cName"/></td>
+      <td><input type="text" name="sName"/></td>
   </tr>
   <tr> 
       <td>Supplier Address</td>
-      <td><input type="text" name="cAddr"/></td>
+      <td><input type="text" name="sAddress"/></td>
   </tr>
   <tr> 
       <td colspan="2"> 
@@ -28,7 +28,7 @@
     <tr>
     <td> Supplier ID</td>
     <td> Supplier Name</td>
-    <td> Supplier Addr</td>
+    <td> Supplier Address</td>
     <td> Operations</td>
     </tr>
     <c:forEach items="${listSuppliers}" var="supplier">

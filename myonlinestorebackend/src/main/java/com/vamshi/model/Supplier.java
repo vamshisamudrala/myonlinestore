@@ -13,7 +13,7 @@ public class Supplier
 	@GeneratedValue
 	int supplierId;
 	String supplierName;
-	String supplierAddr;
+	String supplierAddress;
 	
 	public int getSupplierId() 
 	{
@@ -33,11 +33,11 @@ public class Supplier
 	}
 	public String getSupplierAddr() 
 	{
-		return supplierAddr;
+		return supplierAddress;
 	}
 	public void setSupplierAddr(String supplierAddr) 
 	{
-		this.supplierAddr = supplierAddr;
+		this.supplierAddress = supplierAddr;
 	}
 
 }

@@ -12,15 +12,15 @@
   </tr>
   <tr>
       <td>User Name</td>
-      <td><input type="text" name="uName"/></td>
+      <td><input type="text" name="userName"/></td>
   </tr>
    <tr>
       <td>User Password</td>
-      <td><input type="password" name="uPwd"/></td>
+      <td><input type="password" name="userPassword"/></td>
   </tr>
   <tr> 
       <td>User Address</td>
-      <td><input type="text" name="uAddr"/></td>
+      <td><input type="text" name="userAddress"/></td>
   </tr>
   <tr> 
       <td colspan="2"> 

@@ -8,7 +8,7 @@
 <table class="table-bordered"> 
  <tr>
    <td rowspan="8"> 
-   <img src="<c:url value="/resources/images/${product.productId}.png"  />" height="300" alt = "Generic placeholder thumbnail">
+   <img src="<c:url value="/resources/images/${product.productId}.jpg"  />"  alt = "Generic placeholder thumbnail">
    </td>
    <td> Product Id </td>
    <td> ${product.productId}</td>
@@ -54,7 +54,7 @@
             <option value="5"> 5 </option>
           </select>    
    </td>
-   <td> <input type="submit" value ="BUY" class="btn btn-success"> </td>
+   <td> <input type="submit" value ="addToCart" class="btn btn-success"> </td>
  </tr>
      
 </table>

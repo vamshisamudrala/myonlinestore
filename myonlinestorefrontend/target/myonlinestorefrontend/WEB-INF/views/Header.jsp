@@ -14,44 +14,25 @@
 
 <body>
 
-<nav class="navbar navbar-dark bg-primary">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">myOnlinestore</a>
     </div>
-    <c:if test="${!sessionScope.loggedIn}">
-			<ul class="nav navbar-nav">
-				<li><a href="home">HOME</a></li>				
-			</ul>
-			</c:if>
-			<c:if test="${sessionScope.loggedIn}">
-					<c:if test="${sessionScope.role=='ROLE_ADMIN'}">
-						<ul class="nav navbar-nav" >
-							<li><a href="<c:url value="/product"/>">Manage Product</a></li>
-							<li><a href="<c:url value="/category"/>">Manage Category</a></li>
-							<li><a href="<c:url value="/productDisplay"/>">Product Catalog</a></li>
-						</ul>
-					</c:if>
-					<c:if test="${sessionScope.role=='ROLE_USER'}">
-						<ul class="nav navbar-nav">
-							<li><a href="<c:url value="/userhome"/>">Home</a></li>
-							<li><a href="<c:url value="/productDisplay"/>">Product Display</a></li>
-						</ul>
-					</c:if>
-			</c:if>
-			<ul class="nav navbar-nav navbar-right">
-      <li><a href="<c:url value="/signup"/>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="<c:url value="/login"/>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-		</div>
-		<c:if test="${sessionScope.loggedIn}">
-		<div class="nav navbar-nav navbar-right">
-			<font color="white" face="calibri" size="2">Welcome : ${sessionScope.username}</font>
-			<a href="<c:url value="/perform_logout"/>" class="btn btn-danger">Logout</a>
-		</div>
-		</c:if>
+     <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="<c:url value="/login"/>">LOGIN</a></li>
+      <li><a href="<c:url value="/signup"/>">Sign up</a></li>
+      <li><a href="<c:url value="/product"/>">Manage Product</a></li>
+      <li><a href="<c:url value="/category"/>">Manage Category</a></li>
+      <li><a href="<c:url value="/supplier"/>">Manage Supplier</a></li>
+      <li> <a href="<c:url value='/productDisplay'/>"> PRODUCT CATALOG </a></li>
+      <li> <a href="<c:url value='/cart'/>"> CART </a></li>
+      
+</ul>
   </div>
 </nav>
-  
+
+     
 </body>
 </html>

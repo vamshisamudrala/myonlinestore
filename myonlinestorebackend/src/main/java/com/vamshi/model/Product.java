@@ -26,10 +26,12 @@ public class Product
 	@Transient
 	MultipartFile productimage;
 	
-	public MultipartFile getProductimage() {
+	public MultipartFile getProductimage() 
+	{
 		return productimage;
 	}
-	public void setProductimage(MultipartFile productimage) {
+	public void setProductimage(MultipartFile productimage) 
+	{
 		this.productimage = productimage;
 	}
 	public int getProductId() 

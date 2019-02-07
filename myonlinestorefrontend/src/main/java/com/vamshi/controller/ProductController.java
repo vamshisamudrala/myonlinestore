@@ -37,11 +37,9 @@ public class ProductController
 	
 	@RequestMapping("/product")
 	public String showProduct(Model m)
-	{
+	{   
 		Product product=new Product();
-		m.addAttribute(product);
-		
-		
+	    m.addAttribute(product);
 		List<Product> listProducts=productDAO.listProducts();
 		m.addAttribute("productList",listProducts);
 		m.addAttribute("categoryList",this.getCategories());
@@ -49,7 +47,7 @@ public class ProductController
 		return "Product";
 	}
 	@RequestMapping(value="/InsertProduct",method=RequestMethod.POST)
-	public String insertProduct(@ModelAttribute("product")Product product, @RequestParam("productimage") MultipartFile filedet, Model m)
+	public String insertProduct(@ModelAttribute("product")Product product,@RequestParam("productimage") MultipartFile filedet,Model m)
 	{
 	    productDAO.addProduct(product);
 		
@@ -148,7 +146,7 @@ public class ProductController
 			m.addAttribute("productList", listProducts);
 			return "ProductDisplay";
 		}
-		@RequestMapping("/productDetailsDisplay/{productID}")
+		@RequestMapping("/productDetailsDisplay/{productId}")
 		public String ProductDetailsDisplay(@PathVariable("productId")int productId,Model m)
 		{
 			m.addAttribute("pageinfo","Product Info");

@@ -30,11 +30,11 @@ public class SupplierController {
 			return "Supplier";
 		}
 		@RequestMapping(value="/AddSupplier",method=RequestMethod.POST)
-		public String addSupplier(Model m,@RequestParam("sName")String supplierName,@RequestParam("sAddr")String supplierAddr)
+		public String addSupplier(Model m,@RequestParam("sName")String supplierName,@RequestParam("sAddress")String supplierAddress)
 		{
 			Supplier supplier=new Supplier();
 			supplier.setSupplierName(supplierName);
-			supplier.setSupplierAddr(supplierAddr);
+			supplier.setSupplierAddr(supplierAddress);
 			supplierDAO.addSupplier(supplier);
 			
 			List<Supplier> listSuppliers=supplierDAO.listSuppliers();

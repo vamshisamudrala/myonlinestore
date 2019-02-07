@@ -1,14 +1,37 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-this is payment page
+<%@page language="java" contentType="text/html"%>
+<%@include file="Header.jsp" %>
 
 
-</body>
-</html>
+<div class="container">
+<form action="<c:url value="/invoice"/>"method="post">
+
+<table class="table table-bordered" width="50%" align="center">
+<tr class="success">
+<td colspan="2"><center>Payment Detail</center></td>
+</tr>
+<tr class="info">
+<td colspan="2"><center>
+    <input type="radio" name="Pmode" value="CC">Credit Card
+     <input type="radio" name="Pmode" value="COD">Cash on Delivery
+   </center>  </td>
+     </tr>
+     <tr class="warning">
+     <td>Card Number</td>
+     <td><input type="text" name="cardno"></td>
+     </tr>
+      
+      <tr class="warning">
+     <td>Valid<input type="text" name="Valid"/></td>
+     <td>CVV<input type="text" name="CVV"/></td>
+     </tr>
+     
+      <tr class="success">
+     <td>Name </td>
+     <td><input type="text" name="name"></td>
+     </tr>
+      <tr class="success">
+     <td colspan="2"><center><input type="Submit" value="Pay" class="btn btn-success"/></center></td>
+     </tr>
+     
+     </table>
+</form>
