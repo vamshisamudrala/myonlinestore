@@ -20,7 +20,7 @@
 <c:forEach items="${cartList}" var="cart">
 
 <tr class="info">
-      <td>${cart.productID}</td>
+      <td>${cart.productId}</td>
       <td> ${cart.productName}</td>
       <td>${cart.quantity}</td>
       <td>${cart.price}</td>

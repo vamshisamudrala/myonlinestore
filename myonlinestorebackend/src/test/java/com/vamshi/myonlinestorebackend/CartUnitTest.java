@@ -35,11 +35,11 @@ public class CartUnitTest
 	public void addCartTest()
 	{
 		Cart cart=new Cart();
-		cart.setProductID(2);
+		cart.setProductId(2);
 		cart.setProductName("Lenova core");
 		cart.setQuantity(1);
 		cart.setPrice(4500);
-		cart.setPaymentStatus("NO");
+		cart.setPaymentStatuse("NO");
 		cart.setUsername("venky");
 		
 		assertTrue("Problem in Adding Cart" , cartDAO.addCart(cart));
@@ -53,7 +53,7 @@ public class CartUnitTest
 		assertTrue("Problem in Display the Cart" , listCart.size()>0);
 		for(Cart cart:listCart)
 		{
-			System.out.print(cart.getProductID()+"\t");
+			System.out.print(cart.getProductId()+"\t");
 			System.out.print(cart.getProductName()+"\t");
 			System.out.print(cart.getPrice()+"\t");
 			System.out.print(cart.getPrice()*cart.getQuantity());

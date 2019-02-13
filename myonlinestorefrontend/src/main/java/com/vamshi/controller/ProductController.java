@@ -138,6 +138,7 @@ public class ProductController
 		
 			return "UpdateProduct";
 		}
+		
 		@RequestMapping("/productDisplay")
 		public String displayProduct(Model m)
 		{
@@ -146,6 +147,7 @@ public class ProductController
 			m.addAttribute("productList", listProducts);
 			return "ProductDisplay";
 		}
+		
 		@RequestMapping("/productDetailsDisplay/{productId}")
 		public String ProductDetailsDisplay(@PathVariable("productId")int productId,Model m)
 		{

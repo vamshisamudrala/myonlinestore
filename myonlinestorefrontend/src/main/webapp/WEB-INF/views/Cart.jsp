@@ -11,7 +11,7 @@
 </tr>
 
 <tr>
-<td> Product ID</td>
+<td> Product Id</td>
 <td> Product Name</td>
 <td> Quantity  </td>
 <td> Price </td>
@@ -21,7 +21,7 @@
 <c:forEach items="${cartList}" var="cart">
 <form action="<c:url value="/updateCart/${cart.cartId}"/>" method="get">
 <tr class="info">
-      <td>${cart.productID}</td>
+      <td>${cart.productId}</td>
       <td> ${cart.productName}</td>
       <td><input type="text" value="${cart.quantity}" name="quantity"></td>
       <td>${cart.price}</td>

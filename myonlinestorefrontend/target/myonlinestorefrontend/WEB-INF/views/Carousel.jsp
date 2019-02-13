@@ -1,11 +1,7 @@
-<%@ page language="java" contentType="text/html"%>
-
-
-
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>myOnlinestore</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -15,7 +11,7 @@
 <body>
 
 <div class="container">
-  
+  <h2>Carousel Example</h2>  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -26,28 +22,17 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-
       <div class="item active">
-        <img src="/resource/images/1-big.jpg" alt="Mobiles" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Mobliles</h3>
-        </div>
+        <img src="/resources/images/69.jpg" alt="Los Angeles" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="/resource/images/63591319.jpg" alt="Television" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Television</h3>
-        </div>
+        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="/resource/images/samsung%20notebook9.jpg" alt="Laptops" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Laptops</h3>
-        </div>
+        <img src="resources/images/102.jpg" alt="New york" style="width:100%;">
       </div>
-  
     </div>
 
     <!-- Left and right controls -->
@@ -64,4 +49,3 @@
 
 </body>
 </html>
-

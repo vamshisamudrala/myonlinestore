@@ -50,10 +50,9 @@ public class UserController {
 			userdetail.setUsername(username);
 			userdetail.setCustomerAddress(customerAddr);
 			userdetail.setPassword(password);
-			userdetail.setRole(role);
-			userDAO.registerUser(userdetail);
-			
-			
+			userdetail.setRole("ROLE_USER");
+			userdetail.setEnabled(true);
+			userDAO.registerUser(userdetail);			
 	    return "Login";
 	 }
 	 
@@ -79,18 +78,18 @@ public class UserController {
 				if(role.getAuthority().equals("ROLE_ADMIN"))
 				{
 					loggedIn=true;
-					page="AdminHome";
+					page="ProductDisplay";
 					session.setAttribute("loggedIn", loggedIn);
 					session.setAttribute("username", username);
 				}
 				else
 				{
-					m.addAttribute("pageinfo", "User Home");
+					m.addAttribute("pageinfo", "User_Home");
 					List<Product> listProducts=productDAO.listProducts();
 					m.addAttribute("productList", listProducts);
 					
 					loggedIn=true;
-					page="UserHome";
+					page="ProductDisplay";
 					session.setAttribute("loggedIn", loggedIn);
 					session.setAttribute("username", username);
 				}

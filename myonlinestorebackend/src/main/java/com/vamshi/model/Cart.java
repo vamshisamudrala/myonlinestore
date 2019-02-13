@@ -11,30 +11,37 @@ public class Cart
 {
 	@Id
 	@GeneratedValue
-	int cartID;
-	int productID;
+	int cartId;
+	int productId;
 	int quantity;
 	int price;
 	
 	String productName;
 	String username;
-	String paymentStatus;
+	String paymentStatuse;
 	
-	public int getCartID() 
-	{
-		return cartID;
+	public String getPaymentStatuse() {
+		return paymentStatuse;
 	}
-	public void setCartID(int cartID) 
-	{
-		this.cartID = cartID;
+	public void setPaymentStatuse(String paymentStatuse) {
+		this.paymentStatuse = paymentStatuse;
 	}
-	public int getProductID() 
+	public int getProductId() 
 	{
-		return productID;
+		return productId;
 	}
-	public void setProductID(int productID) 
+	public void setProductId(int productId) 
 	{
-		this.productID = productID;
+		this.productId = productId;
+	}
+	
+	public int getCartId() 
+	{
+		return cartId;
+	}
+	public void setCartId(int cartId) 
+	{
+		this.cartId = cartId;
 	}
 	public int getQuantity() 
 	{
@@ -68,13 +75,7 @@ public class Cart
 	{
 		this.username = username;
 	}
-	public String getPaymentStatus() 
-	{
-		return paymentStatus;
-	}
-	public void setPaymentStatus(String paymentStatus) 
-	{
-		this.paymentStatus = paymentStatus;
-	}
+
+
 
 }

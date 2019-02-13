@@ -4,11 +4,11 @@
 
 <br> <br>
 
-<form action="<c:url value="/addToCart/${product.productId}" />" >
+<form action="<c:url value="/addtoCart/${product.productId}"/>" >
 <table class="table-bordered"> 
  <tr>
    <td rowspan="8"> 
-   <img src="<c:url value="/resources/images/${product.productId}.jpg"  />" style="max-height:250px;min-height:250px; alt = "Generic placeholder thumbnail">
+   <img src="<c:url value="/resources/images/${product.productId}.jpg"/>"  alt = "Generic placeholder thumbnail">
    </td>
    <td> Product Id </td>
    <td> ${product.productId}</td>
@@ -54,7 +54,7 @@
             <option value="5"> 5 </option>
           </select>    
    </td>
-   <td> <input type="submit" value ="BUY" class="btn btn-success"> </td>
+   <td> <input type="submit" value ="addToCart" class="btn btn-success"> </td>
  </tr>
      
 </table>

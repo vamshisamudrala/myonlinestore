@@ -11,8 +11,8 @@
 </tr>
 <tr class="info">
 <td colspan="2"><center>
-    <input type="radio" name="Pmode" value="CC">Credit Card
-     <input type="radio" name="Pmode" value="COD">Cash on Delivery
+    <input type="radio" name="paymentmode" value="CC">Credit Card
+     <input type="radio" name="paymentmode" value="COD">Cash on Delivery
    </center>  </td>
      </tr>
      <tr class="warning">

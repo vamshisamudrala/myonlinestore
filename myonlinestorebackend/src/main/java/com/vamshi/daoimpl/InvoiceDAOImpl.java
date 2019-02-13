@@ -34,7 +34,7 @@ public class InvoiceDAOImpl implements InvoiceDAO
 	public boolean updateCart(String username) 
 	{
 		Session session=sessionFactory.getCurrentSession();
-		Query query=session.createQuery("update Cart set paymentstatuse='paid' where username=:uname");
+		Query query=session.createQuery("update Cart set PaymentStatuse='paid' where username=:uname");
 		query.setParameter("uname", username);
 		int row_eff=query.executeUpdate();
 		if(row_eff>0)

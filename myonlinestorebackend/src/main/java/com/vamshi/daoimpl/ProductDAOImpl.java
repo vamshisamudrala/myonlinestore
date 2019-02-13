@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -68,7 +69,7 @@ public class ProductDAOImpl implements ProductDAO
 	public List<Product> listProducts() 
 	{
 		Session session=sessionFactory.openSession();
-		org.hibernate.Query query=session.createQuery("from Product");
+		Query query=session.createQuery("from Product");
 		List<Product> listProducts=query.list();
 		session.close();
 		return listProducts;

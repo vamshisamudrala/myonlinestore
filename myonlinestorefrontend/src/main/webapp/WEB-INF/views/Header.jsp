@@ -20,19 +20,20 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">myOnlinestore</a>
+      <a class="navbar-brand" href="">myOnlinestore</a>
     </div>
     
     <c:if test="${!sessionScope.loggedIn}">
 			<ul class="nav navbar-nav">
-				<li><a href="home">HOME</a></li>				
+								
 			</ul>
 			</c:if>
 			<c:if test="${sessionScope.loggedIn}">
 					<c:if test="${sessionScope.role=='ROLE_ADMIN'}">
 						<ul class="nav navbar-nav" >
+						   <li><a href="<c:url value="/category"/>">Manage Category</a></li>
 							<li><a href="<c:url value="/product"/>">Manage Product</a></li>
-							<li><a href="<c:url value="/category"/>">Manage Category</a></li>
+							<li><a href="<c:url value="/supplier"/>">Manage Supplier</a></li>
 							<li><a href="<c:url value="/productDisplay"/>">Product Catalog</a></li>
 						</ul>
 					</c:if>
@@ -40,6 +41,7 @@
 						<ul class="nav navbar-nav">
 							<li><a href="<c:url value="/userhome"/>">Home</a></li>
 							<li><a href="<c:url value="/productDisplay"/>">Product Display</a></li>
+							<li><a href="<c:url value="/Cart"/>">Cart</a></li>
 						</ul>
 					</c:if>
 			</c:if>

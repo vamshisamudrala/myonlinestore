@@ -26,7 +26,7 @@ public class CartController
 	@Autowired
 	ProductDAO productDAO;
 	
-	@RequestMapping("/cart")
+	@RequestMapping("/Cart")
 	public String showCart(Model m,HttpSession session)
 	{
 		String username=(String)session.getAttribute("username");
@@ -34,21 +34,21 @@ public class CartController
 		m.addAttribute("cartList",cartList);
 		m.addAttribute("grandTotal",this.getGrandTotal(cartList));
 		
-		return "cart";
+		return "Cart";
 	}
 
-	@RequestMapping("/addtoCart/{porductId}")
+	@RequestMapping("/addtoCart/{productId}")
 	public String addtoCart(@PathVariable("productId")int productId,@RequestParam("quantity")int quantity,HttpSession session,Model m)
 	{
 		Product product=productDAO.getProduct(productId);
 		String username=(String)session.getAttribute("username");
 		
 		Cart cart=new Cart();
-		cart.setProductID(product.getProductId());
+		cart.setProductId(product.getProductId());
 		cart.setProductName(product.getProductName());
 		cart.setQuantity(quantity);	
 		cart.setPrice(product.getPrice());
-		cart.setPaymentStatus("NP");
+		cart.setPaymentStatuse("Not Paid");
 		cart.setUsername(username);
 		cartDAO.addCart(cart);
 		List<Cart> cartList=cartDAO.listCart(username);

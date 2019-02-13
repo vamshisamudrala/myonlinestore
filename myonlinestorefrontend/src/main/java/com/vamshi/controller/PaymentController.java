@@ -67,7 +67,7 @@ public class PaymentController
 	public String paymentpage(Model m,HttpSession session)
 	{
 		
-		return "payment";
+		return "Payment";
 		
 	}
 	
