@@ -2,13 +2,16 @@
 <%@include file="Header.jsp" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
+<html>
+
 <br> <br>
 
+<body style="background-image: url('<c:url value='resources/images/bgproject.jpg'/>')" >
 <form action="<c:url value="/addtoCart/${product.productId}"/>" >
 <table class="table-bordered"> 
  <tr>
    <td rowspan="8"> 
-   <img src="<c:url value="/resources/images/${product.productId}.jpg"/>"  alt = "Generic placeholder thumbnail">
+   <img src="<c:url value="/resources/images/${product.productId}.jpg"/>"  height="400" alt = "Generic placeholder thumbnail">
    </td>
    <td> Product Id </td>
    <td> ${product.productId}</td>
@@ -30,12 +33,12 @@
  </tr>
  
   <tr>
-   <td> Category </td>
+   <td> Category Id</td>
    <td> ${product.categoryId}</td>
  </tr>
  
   <tr>
-   <td> Supplier </td>
+   <td> Supplier Id</td>
    <td> ${product.supplierId}</td>
  </tr>
  
@@ -59,3 +62,6 @@
      
 </table>
 </form>
+
+</body>
+</html>

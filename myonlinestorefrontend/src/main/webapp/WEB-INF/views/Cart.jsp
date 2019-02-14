@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html"%>
 <%@include file="Header.jsp" %>
 
+<html>
+<body style="background-image: url('<c:url value='resources/images/bgproject.jpg'/>')" > 
+
 <div class="container">
 <table class="table table-bordered">
 
@@ -39,7 +42,7 @@
 </tr>
 <tr class="info">
 <td colspan="3">
-  <center> <a href="<c:url value="/ProductDisplay"/>" class="btn btn-success">Continue Shopping</a></center>
+  <center> <a href="<c:url value="/productDisplay"/>" class="btn btn-success">Continue Shopping</a></center>
     </td>
     <td colspan="3">
    <center> <a href="<c:url value="/checkout"/>" class="btn btn-success">Check Out</a></center>
@@ -47,3 +50,6 @@
 </tr>
 </table>
 </div>
+
+</body>
+</html>

@@ -34,12 +34,10 @@
 						   <li><a href="<c:url value="/category"/>">Manage Category</a></li>
 							<li><a href="<c:url value="/product"/>">Manage Product</a></li>
 							<li><a href="<c:url value="/supplier"/>">Manage Supplier</a></li>
-							<li><a href="<c:url value="/productDisplay"/>">Product Catalog</a></li>
 						</ul>
 					</c:if>
 					<c:if test="${sessionScope.role=='ROLE_USER'}">
 						<ul class="nav navbar-nav">
-							<li><a href="<c:url value="/userhome"/>">Home</a></li>
 							<li><a href="<c:url value="/productDisplay"/>">Product Display</a></li>
 							<li><a href="<c:url value="/Cart"/>">Cart</a></li>
 						</ul>
@@ -52,7 +50,7 @@
 		</div>
 		<c:if test="${sessionScope.loggedIn}">
 		<div class="nav navbar-nav navbar-right">
-			<font color="white" face="calibri" size="2">Welcome : ${sessionScope.username}</font>
+			<font color="white" face="calibri" size="3">Welcome : ${sessionScope.username}</font>
 			<a href="<c:url value="/perform_logout"/>" class="btn btn-danger">Logout</a>
 		</div>
 		</c:if>

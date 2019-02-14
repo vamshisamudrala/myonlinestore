@@ -8,9 +8,9 @@
 <style>
 body{
     margin: 0;
-    font-size: .9rem;
-    font-weight: 400;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 1000;
+    line-height: 2.0;
     color: #212529;
     text-align: left;
     background-color: #f5f8fa;
@@ -18,7 +18,7 @@ body{
 
 .navbar-laravel
 {
-    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+    box-shadow: 0 2px 4px rgba(0,0,0,0);
 }
 
 .navbar-brand , .nav-link, .my-form, .login-form
@@ -52,11 +52,11 @@ body{
 		
 	}
 </style>
-<body>
+<body style="background-image: url('<c:url value='resources/images/bg1.jpg'/>')" >
 <main class="login-form">
     <div class="cotainer">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">Login</div>
                     <div class="card-body">
@@ -85,11 +85,11 @@ body{
                                 </div>
                             </div>
 
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </div>
-                    </div>
+                          </div>
                     </form>
                 </div>
             </div>

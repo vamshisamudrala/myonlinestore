@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html"%>
 <%@include file="Header.jsp" %>
   
+<html>
+<body style="background-image: url('<c:url value='resources/images/bgproject.jpg'/>')" >
+
 <div class="row">
   <c:forEach items = "${productList}" var="product" >
 
@@ -16,3 +19,6 @@
     </div>     
   </c:forEach>
 </div> 
+
+</body>
+</html>

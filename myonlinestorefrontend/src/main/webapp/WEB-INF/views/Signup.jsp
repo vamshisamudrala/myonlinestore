@@ -3,7 +3,6 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <html>
-<head>
 <style type="text/css">
 body{
     background-color: #525252;
@@ -24,10 +23,12 @@ body{
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<body style="background-image: url('<c:url value='resources/images/bg1.jpg'/>')" >
 <form action="<c:url value="/addUser"/>" method="post">
 <div class="container">
         <div class="row centered-form">
-        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        <div class="col-xs-14 col-sm-10 col-md-6 col-sm-offset-4 col-md-offset-4">
         	<div class="panel panel-default">
         		<div class="panel-heading">
 			    		<h3 class="panel-title">Please sign up for myOnlinestore </h3>
@@ -36,14 +37,14 @@ body{
 			    		<form role="form">
 			    			
 			    				<div class="form-group">
-			    				<input type="text" name="name" id="name" class="form-control input-sm" placeholder="Name">
+			    				<input type="text" name="customerName" id="customerName" class="form-control input-sm" placeholder="Name">
 			    			</div>
 			   <div class="form-group">
 			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="username">
 			    			</div>
 			    			
 			    			<div class="form-group">
-			    				<input type="text" name="address" id="address" class="form-control input-sm" placeholder=" Address">
+			    				<input type="text" name="customerAddress" id="customerAddress" class="form-control input-sm" placeholder=" Address">
 			    			</div>
                              
 			    				<div class="form-group">
@@ -60,5 +61,5 @@ body{
     	</div>
     </div>
    </form>
-   </body>
+ </body>
 </html>

@@ -2,6 +2,9 @@
 <%@include file="Header.jsp"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<html>
+<body style="background-image: url('<c:url value='resources/images/bgproject.jpg'/>')" >
+
 <form action="<c:url value="/UpdateCategory"/>" method="post">
 <table align="center" class="table">
    <tr>
@@ -27,3 +30,6 @@
       </tr>
 </table>
 </form>
+
+</body>
+</html>

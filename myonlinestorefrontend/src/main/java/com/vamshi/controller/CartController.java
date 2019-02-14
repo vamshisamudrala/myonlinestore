@@ -76,7 +76,7 @@ public class CartController
 	     }
 		
 	  @RequestMapping("/deleteCart/{cartId}")
-	  public String deleteCart(@PathVariable("cartItemId")int cartId,Model m, HttpSession session)
+	  public String deleteCart(@PathVariable("cartId")int cartId,Model m, HttpSession session)
 	   {
 		  Cart cart=cartDAO.getCart(cartId);
 		 

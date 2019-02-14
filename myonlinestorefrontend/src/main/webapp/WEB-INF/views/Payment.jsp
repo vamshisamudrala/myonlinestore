@@ -1,6 +1,8 @@
 <%@page language="java" contentType="text/html"%>
 <%@include file="Header.jsp" %>
 
+<html>
+<body style="background-image: url('<c:url value='resources/images/bgproject.jpg'/>')" >
 
 <div class="container">
 <form action="<c:url value="/invoice"/>"method="post">
@@ -35,3 +37,6 @@
      
      </table>
 </form>
+</div>
+</body>
+</html>

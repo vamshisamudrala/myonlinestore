@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html"%>
 <%@include file="Header.jsp" %>
 
+<html>
+<body style="background-image: url('<c:url value='resources/images/bgproject.jpg'/>')" >
+
 <div class="container">
 <table class="table table-bordered">
 
@@ -46,7 +49,7 @@
      Address 
 </td>
 <td colspan="3">
-  <textarea name="addr" cols="100" rows="3"> ${addr}</textarea>
+  <textarea name="address" cols="100" rows="3"> ${address}</textarea>
     </td>
     
     <td>
@@ -70,3 +73,5 @@
 
 </table>
 </div>
+</body>
+</html>

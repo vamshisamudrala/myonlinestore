@@ -2,12 +2,14 @@
 <%@include file="Header.jsp"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
-<br/><br/>
+<html>
+<body style="background-image: url('<c:url value='resources/images/bgproject.jpg'/>')" >
 
 <form:form action="InsertProduct" modelAttribute="product" method="post" enctype="multipart/form-data">
-<table align="center" class="table-bordered">
+<table align=right class="table">
      <tr>
-        <td colspan="2"><center>Product Information</center></td>
+              <td colspan="1">
+      <center><h2>Product Information</h2></center></td>
      </tr>
      <tr>
          <td>Product Name</td>
@@ -48,17 +50,36 @@
         </table>
         </form:form>
         
-        
-        <table align="center" class="table-bordered">
-        <tr>
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+<script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <legend>Manage Product</legend>
+        </div>
+    </div>
+    
+	
+	<div class="row">
+	    <div class="col-md-12">
+	        <table class="table table-responsive table-hover table-bordered ">
+    <thead>
+      <tr class="info">
            <td>Product ID</td>
            <td>Product Name</td>
            <td>Price</td>
            <td>Stock</td>
            <td>SupplierId</td>
            <td>Operations</td>
-         </tr>
-         <c:forEach items="${productList}" var="product">
+      </tr>
+    </thead>
+    <tbody>
+     <c:forEach items="${productList}" var="product">
          <tr>
             <td>${product.productId}</td>
             <td>${product.productName}</td>
@@ -71,6 +92,11 @@
             </td>   
           </tr>
           </c:forEach>
-          </table>
+     
+    </tbody>
+  </table>
+	    </div>
+	</div>
+</div>
           </body>
           </html>

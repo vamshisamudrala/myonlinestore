@@ -5,13 +5,14 @@
 
 <h3>Welcome to myOnlinestore</h3>
 <p><h4>Click on Login or Sign up</h4></p>
+<p>At myOnlinestore, you will be able to find a wide selection of electronics from top brands. Shop for Mobile Phones, Televisions, Headphones, Speakers, Laptops, Computers & Accessories much more at the best prices on myOnlinestore.com . </p>
 
 <spring:url var="css" value="/assets/css" />
 <spring:url var="images" value="/resources/images" />
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 <html>
 <head>
-	<title>BeYou</title>
+	<title>myOnlinestore</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -42,7 +43,7 @@
 </head>
 <body>
 	
-	<div style="width: 100%; height:100px;"></div>
+	<div style="width: 50%; height:50px;"></div>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -55,14 +56,14 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
     <div class="item active">
-        <img src="<c:url value="/resources/images/10.jpg" />" alt="iphone">     
+        <img src="<c:url value="/resources/images/phn.jpg" />" alt="Mobile">     
       </div>
       <div class="item">
-        <img src="<c:url value="/resources/images/laptop.jpg" />" alt="laptops">     
+        <img src="<c:url value="/resources/images/laptop.jpg" />" alt="Laptops">     
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/images/mobiles.jpg" />" alt="mobile">     
+        <img src="<c:url value="/resources/images/tv.jpg" />" alt="Televisions">     
       </div>
        </div>
 

@@ -43,12 +43,12 @@ public class UserController {
 		}
 	     
 	 @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-		public String addUser(@ModelAttribute("user")UserDetail userDetail, Model m, String customerAddr, String customerName, String username, String password, String role)
+		public String addUser(@ModelAttribute("user")UserDetail userDetail, Model m, String customerAddress, String customerName, String username, String password, String role)
 	 {
 			UserDetail userdetail=new UserDetail();
 			userdetail.setCustomerName(customerName);
 			userdetail.setUsername(username);
-			userdetail.setCustomerAddress(customerAddr);
+			userdetail.setCustomerAddress(customerAddress);
 			userdetail.setPassword(password);
 			userdetail.setRole("ROLE_USER");
 			userdetail.setEnabled(true);
@@ -77,8 +77,12 @@ public class UserController {
 				
 				if(role.getAuthority().equals("ROLE_ADMIN"))
 				{
+					m.addAttribute("pageinfo", "Admin_Home");
+					List<Product> listProducts=productDAO.listProducts();
+					m.addAttribute("productList", listProducts);
+					
 					loggedIn=true;
-					page="ProductDisplay";
+					page="AdminHome";
 					session.setAttribute("loggedIn", loggedIn);
 					session.setAttribute("username", username);
 				}

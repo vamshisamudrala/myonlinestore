@@ -2,7 +2,7 @@
 <%@include file="Header.jsp"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-<body>
+<body style="background-image: url('<c:url value='resources/images/bgproject.jpg'/>')" >
 
 <form action="<c:url value="/AddUser"/>" method="post">
 <table align=center class="table">
